@@ -45,7 +45,7 @@ module Gem
     end
   end
   class Package
-    def read_checksums gem
+    def read_checksums(gem)
       Gem.load_yaml
 
       @checksums = gem.seek 'checksums.yaml.gz' do |entry|
