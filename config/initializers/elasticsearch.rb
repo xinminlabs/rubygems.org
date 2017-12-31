@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 if Rails.env.test? || Rails.env.development?
   port = Toxiproxy.running? ? 22_221 : 9200
   if Toxiproxy.running?
