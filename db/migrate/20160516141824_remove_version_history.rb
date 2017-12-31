@@ -10,6 +10,6 @@ class RemoveVersionHistory < ActiveRecord::Migration[4.2]
       t.integer :count
     end
 
-    add_index :version_histories, [:version_id, :day], unique: true
+    add_index :version_histories, %i[version_id day], unique: true
   end
 end

@@ -5,6 +5,6 @@ class CreateGemDownload < ActiveRecord::Migration[4.2]
       t.integer :version_id, null: false
       t.column :count, :bigint
     end
-    add_index :gem_downloads, [:rubygem_id, :version_id], unique: true
+    add_index :gem_downloads, %i[rubygem_id version_id], unique: true
   end
 end
