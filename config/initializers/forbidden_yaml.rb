@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # XXX: This is purely a monkey patch to close the exploit vector for now, a more
 # permanent solution should be pushed upstream into rubygems.
 
