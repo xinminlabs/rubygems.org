@@ -9,7 +9,7 @@ class ClearanceCreateUsers < ActiveRecord::Migration[4.2]
       t.boolean :email_confirmed, default: false, null: false
     end
 
-    add_index :users, [:id, :token]
+    add_index :users, %i[id token]
     add_index :users, :email
     add_index :users, :token
   end

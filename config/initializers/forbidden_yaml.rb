@@ -9,7 +9,7 @@ abort "Use Psych for YAML, install libyaml and reinstall ruby" unless YAML == Ps
 
 module Gem
   class Specification
-    WHITELISTED_CLASSES = %w(
+    WHITELISTED_CLASSES = %w[
       Symbol
       Time
       Date
@@ -19,12 +19,12 @@ module Gem
       Gem::Specification
       Gem::Version
       Gem::Version::Requirement
-    )
+    ]
 
-    WHITELISTED_SYMBOLS = %w(
+    WHITELISTED_SYMBOLS = %w[
       development
       runtime
-    )
+    ]
 
     def self.from_yaml(input)
       input = normalize_yaml_input input

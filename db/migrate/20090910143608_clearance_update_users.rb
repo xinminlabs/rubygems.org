@@ -5,7 +5,7 @@ class ClearanceUpdateUsers < ActiveRecord::Migration[4.2]
       t.string :remember_token, limit: 128
     end
 
-    add_index :users, [:id, :confirmation_token]
+    add_index :users, %i[id confirmation_token]
     add_index :users, :remember_token
   end
 
