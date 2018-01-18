@@ -18,5 +18,5 @@ if($("#advanced-search").length){
       var updated     = $updated.val().length > 0 ? 'updated: ' + $updated.val() : '';
 
       $main.val($.trim(name + ' ' + summary + ' ' + description + ' ' + downloads + ' ' + updated));
-  });
+    });
 }
