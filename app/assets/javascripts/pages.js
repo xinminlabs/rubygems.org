@@ -28,7 +28,7 @@ $(document).ready(function() {
   };
 
   var sortByLastModified = function(files) {
-    return files.sort(function(a, b) {return Date.parse(b.LastModified) - Date.parse(a.LastModified)});
+    return files.sort(function(a, b) {return Date.parse(b.LastModified) - Date.parse(a.LastModified);});
   };
 
   var bytesToSize = function(bytes) {
