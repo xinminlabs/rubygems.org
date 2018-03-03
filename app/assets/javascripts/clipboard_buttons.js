@@ -5,9 +5,9 @@ $(function() {
   var copyButtons = $('.gem__code__icon');
 
   function hideCopyShowCopiedTooltips(e) {
-    copyTooltip.removeClass("clipboard-is-hover");
+    copyTooltip.removeClass('clipboard-is-hover');
     copiedTooltip.insertAfter(e.trigger);
-    copiedTooltip.addClass("clipboard-is-active");
+    copiedTooltip.addClass('clipboard-is-active');
   };
 
   clipboard.on('success', function(e) {
@@ -17,19 +17,19 @@ $(function() {
 
   clipboard.on('error', function(e) {
     hideCopyShowCopiedTooltips(e);
-    copiedTooltip.text("Ctrl-C to Copy");
+    copiedTooltip.text('Ctrl-C to Copy');
   });
 
   copyButtons.hover(function() {
     copyTooltip.insertAfter(this);
-    copyTooltip.addClass("clipboard-is-hover");
+    copyTooltip.addClass('clipboard-is-hover');
   });
 
   copyButtons.mouseout(function() {
-    copyTooltip.removeClass("clipboard-is-hover");
+    copyTooltip.removeClass('clipboard-is-hover');
   });
 
   copyButtons.mouseout(function() {
-    copiedTooltip.removeClass("clipboard-is-active");
+    copiedTooltip.removeClass('clipboard-is-active');
   });
 });

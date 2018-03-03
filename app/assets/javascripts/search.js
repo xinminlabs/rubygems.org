@@ -1,4 +1,4 @@
-if($("#advanced-search").length){
+if($('#advanced-search').length){
   var $main        = $('#home_query');
   var $name        = $('input#name');
   var $summary     = $('input#summary');
