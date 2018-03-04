@@ -39,7 +39,7 @@ $(document).ready(function() {
     k = 1024;
     sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
     i = Math.floor(Math.log(bytes) / Math.log(k));
-    return (bytes / Math.pow(k, i)).toPrecision(3) + " " + sizes[i];
+    return (bytes / Math.pow(k, i)).toPrecision(3) + ' ' + sizes[i];
   };
 
   var renderDumpList = function(files) {
@@ -47,14 +47,14 @@ $(document).ready(function() {
     content = [];
     jQuery.each(files, function(idx, item) {
       if ('STANDARD' === item.StorageClass) {
-        return content.push("<li><a href='https://s3-us-west-2.amazonaws.com/rubygems-dumps/" + item.Key + "'>" + (item.LastModified.replace('.000Z', '')) + " (" + (bytesToSize(item.Size)) + ")</a></li>");
+        return content.push('<li><a href=\'https://s3-us-west-2.amazonaws.com/rubygems-dumps/' + item.Key + '\'>' + (item.LastModified.replace('.000Z', '')) + ' (' + (bytesToSize(item.Size)) + ')</a></li>');
       }
     });
-    return content.join("\n");
+    return content.join('\n');
   };
 
-  data_title = "RubyGems.org Data Dumps | RubyGems.org | your community gem host";
-  page_title = $(document).find("title").text();
+  data_title = 'RubyGems.org Data Dumps | RubyGems.org | your community gem host';
+  page_title = $(document).find('title').text();
   if(page_title === data_title){
     getDumpData('ul.rubygems-dump-listing-postgresql', 'postgresql');
     getDumpData('ul.rubygems-dump-listing-redis', 'redis');
@@ -63,6 +63,6 @@ $(document).ready(function() {
 
 //stats page
 $('.stats__graph__gem__meter').each(function() {
-  bar_width = $(this).data("bar_width");
+  bar_width = $(this).data('bar_width');
   $(this).animate({ width: bar_width + '%' }, 700).removeClass('t-item--hidden');
 });
