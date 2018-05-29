@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 # https://github.com/mime-types/ruby-mime-types/issues/94
