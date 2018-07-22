@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EmailConfirmationsController < ApplicationController
   def update
     user = User.find_by(confirmation_token: params[:token])

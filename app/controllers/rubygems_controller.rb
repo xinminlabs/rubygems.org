@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RubygemsController < ApplicationController
   include LatestVersion
   before_action :redirect_to_root, only: %i[edit update], unless: :signed_in?
