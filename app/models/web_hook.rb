@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class WebHook < ApplicationRecord
   GLOBAL_PATTERN = '*'.freeze
 

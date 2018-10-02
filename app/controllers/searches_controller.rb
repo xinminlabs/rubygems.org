@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SearchesController < ApplicationController
   before_action :set_page, :limit_page, only: :show
   # Limit max page as ES result window is upper bounded by 10_000 records
